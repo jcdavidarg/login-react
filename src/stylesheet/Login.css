@@ -1,0 +1,16 @@
+.contenedor-login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  width: 500px;
+  border: 1px solid gainsboro;
+  background-color: gainsboro;
+  border-radius: 25px;
+}
+
+.formulario-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

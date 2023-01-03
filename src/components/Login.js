@@ -1,4 +1,5 @@
 import "../stylesheet/Login.css";
+import axios from "axios";
 
 function Login() {
   const submitHandler = (e) => {
@@ -18,6 +19,11 @@ function Login() {
       console.log("Credenciales inválidas");
     } else {
       console.log("Estamos listos para enviar la información");
+      axios
+        .post("http://challenge-react.alkemy.org", { email, password })
+        .then((res) => {
+          console.log(res.data);
+        });
     }
   };
 

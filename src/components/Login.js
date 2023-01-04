@@ -21,12 +21,12 @@ function Login() {
     } else if (email !== "challenge@alkemy.org" || password !== "react") {
       swAlert(<h2>Credenciales inválidas</h2>);
     } else {
-      swAlert(<h2>Estamos listos para enviar la información</h2>);
-
       axios
         .post("http://challenge-react.alkemy.org", { email, password })
         .then((res) => {
-          console.log(res.data);
+          swAlert(<h2>Perfecto, ingresaste correctamente</h2>);
+          const tokenRecibido = res.data.token;
+          localStorage.setItem("token", tokenRecibido);
         });
     }
   };
